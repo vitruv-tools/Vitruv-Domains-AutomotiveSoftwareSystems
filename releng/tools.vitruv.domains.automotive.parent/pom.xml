@@ -29,22 +29,6 @@
 			<layout>p2</layout>
 			<url>https://kit-sdq.github.io/updatesite/release/metamodels/</url>
 		</repository>
-		<!--EMFText repository currently not available
-		<repository>
-			<id>EMFText</id>
-			<layout>p2</layout>
-			<url>http://update.emftext.org/release</url>
-		</repository>-->
-		<repository>
-			<id>EMFText and JaMoPP (P2 Wrapper)</id>
-			<layout>p2</layout>
-			<url>https://kit-sdq.github.io/updatesite/release/p2-wrapper/</url>
-		</repository>
-		<repository>
-			<id>Palladiosimulator</id>
-			<layout>p2</layout>
-			<url>https://sdqweb.ipd.kit.edu/eclipse/palladiosimulator/releases/latest/</url>
-		</repository>
 		<repository>
 			<id>Papyrus</id>
 			<layout>p2</layout>
@@ -54,11 +38,6 @@
 			<id>Papyrus SysML</id>
 			<layout>p2</layout>
 			<url>http://download.eclipse.org/modeling/mdt/papyrus/components/sysml14/2018-09/</url>
-		</repository>
-		<repository>
-		  <id>Confidentiality4CBSE</id>
-		  <layout>p2</layout>
-		  <url>http://kastel-scbs.github.io/updatesite/nightly/confidentiality</url>
 		</repository>
 		<repository>
 		  <id>App4MC (Amalthea)</id>
