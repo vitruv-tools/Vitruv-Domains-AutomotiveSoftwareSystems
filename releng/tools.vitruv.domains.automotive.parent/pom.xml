@@ -30,19 +30,14 @@
 			<url>https://kit-sdq.github.io/updatesite/release/metamodels/</url>
 		</repository>
 		<repository>
-			<id>Papyrus</id>
+			<id>App4MC (Amalthea)</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/modeling/mdt/papyrus/updates/releases/2018-09/</url>
+			<url>http://download.eclipse.org/app4mc/updatesites/releases/0.8.2/</url>
 		</repository>
 		<repository>
-			<id>Papyrus SysML</id>
+			<id>Apache Commons</id> <!-- Necessary for Amalthea -->
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/modeling/mdt/papyrus/components/sysml14/2018-09/</url>
-		</repository>
-		<repository>
-		  <id>App4MC (Amalthea)</id>
-		  <layout>p2</layout>
-		  <url>http://download.eclipse.org/app4mc/updatesites/releases/0.8.2/</url>
+			<url>https://download.eclipse.org/tools/orbit/downloads/drops/R20180330011457/repository/</url>
 		</repository>
 		<repository>
 			<id>Sphinx</id> <!-- Necessary for Amalthea -->
@@ -50,5 +45,4 @@
 			<url>http://download.eclipse.org/sphinx/releases/0.11.x</url>
 		</repository>
 	</repositories>
-
 </project>
