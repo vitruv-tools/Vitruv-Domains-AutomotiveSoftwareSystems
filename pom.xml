@@ -16,7 +16,7 @@
 		<module>bundles</module>
 		<module>features</module>
 		<module>releng/tools.vitruv.domains.automotive.updatesite</module>
-		<module>releng/tools.vitruv.domains.automotive-updatesite.aggregated</module>
+		<module>releng/tools.vitruv.domains.automotive.updatesite.aggregated</module>
 	</modules>
 
 </project>
