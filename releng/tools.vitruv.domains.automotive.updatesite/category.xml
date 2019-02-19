@@ -10,7 +10,7 @@
       <category name="Vitruv Domains Automotive"/>
    </feature>
    <feature id="tools.vitruv.domains.amalthea.feature.source" version="0.3.0.qualifier">
-      <category name="Vitruv Domains"/>
+      <category name="Vitruv Domains Automotive"/>
    </feature>
    <category-def name="Vitruv Domains Automotive" label="Vitruv Domains: Automotive">
       <description>
