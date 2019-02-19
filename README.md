@@ -1,4 +1,4 @@
-# Vitruv-Domains
+# Vitruv-Domains for Automotive Software Systems
 
 [![Travis CI](https://img.shields.io/travis/vitruv-tools/Vitruv-Domains-AutomotiveSoftwareSystems.svg)](https://travis-ci.org/vitruv-tools/Vitruv-Domains-AutomotiveSoftwareSystems)
 [![Issues](https://img.shields.io/github/issues/vitruv-tools/Vitruv-Domains-AutomotiveSoftwareSystems.svg)](https://github.com/vitruv-tools/Vitruv-Domains-AutomotiveSoftwareSystems/issues)
