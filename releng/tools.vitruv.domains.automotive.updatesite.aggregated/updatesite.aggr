@@ -11,7 +11,7 @@
       <repositories location="http://kit-sdq.github.io/updatesite/release/commons" mirrorArtifacts="false">
         <features name="edu.kit.ipd.sdq.commons.util.pcm.feature.feature.group" versionRange="1.1.0"/>
       </repositories>
-      <repositories location="http://download.eclipse.org/app4mc/updatesites/releases/0.8.2/" mirrorArtifacts="false">
+      <repositories location="http://download.eclipse.org/app4mc/updatesites/releases/0.9.5/" mirrorArtifacts="false">
         <features name="org.eclipse.app4mc.amalthea.models.feature.group"/>
       </repositories>
       <repositories location="http://download.eclipse.org/releases/2018-12/" mirrorArtifacts="false">
