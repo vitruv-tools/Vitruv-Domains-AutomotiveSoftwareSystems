@@ -16,7 +16,7 @@ class AmaltheaDomain extends AbstractTuidAwareVitruvDomain {
 
 	def protected static TuidCalculatorAndResolver generateTuidCalculator() {
 		return new AttributeTuidCalculatorAndResolver(METAMODEL_NAMESPACE, 
-			#[AmaltheaPackage.eINSTANCE.INamedElement_Name.name]
+			#[AmaltheaPackage.eINSTANCE.INamed_Name.name]
 		);
 	}
 	
