@@ -6,8 +6,8 @@ import org.eclipse.emf.ecore.EObject
 import org.junit.Before
 import tools.vitruv.framework.tuid.TuidManager
 import org.eclipse.app4mc.amalthea.model.AmaltheaFactory
-import org.eclipse.app4mc.amalthea.model.INamedElement
 import org.eclipse.app4mc.amalthea.model.AmaltheaPackage
+import org.eclipse.app4mc.amalthea.model.INamed
 
 class AmaltheaDomainTest {
 	private static val TEST_NAME = "Test";
@@ -31,13 +31,13 @@ class AmaltheaDomainTest {
 		testNamedTuid(AmaltheaFactory.eINSTANCE.createConnector());
 	}
 	
-	private def testNamedTuid(INamedElement named) {
+	private def testNamedTuid(INamed named) {
 		named.name = TEST_NAME;
 		testTuid(named);
 	}
 	
-	private def testTuid(INamedElement named) {
-		assertTuid(named, AmaltheaPackage.eNS_URI, "<root>-_-" + named.eClass.name + "-_-" + AmaltheaPackage.eINSTANCE.INamedElement_Name.name + "=" + named.name);
+	private def testTuid(INamed named) {
+		assertTuid(named, AmaltheaPackage.eNS_URI, "<root>-_-" + named.eClass.name + "-_-" + AmaltheaPackage.eINSTANCE.INamed_Name.name + "=" + named.name);
 	}
 	
 	private def void assertTuid(EObject object, String expectedNamespaceUri, String expectedIdentifier) {
