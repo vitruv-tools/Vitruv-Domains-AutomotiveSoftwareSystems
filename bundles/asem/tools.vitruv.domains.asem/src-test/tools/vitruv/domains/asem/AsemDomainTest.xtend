@@ -2,13 +2,13 @@ package tools.vitruv.domains.asem
 
 import org.junit.Test
 import org.junit.Assert
-import edu.kit.ipd.sdq.ASEM.ASEMPackage
-import edu.kit.ipd.sdq.ASEM.base.Identifiable
-import edu.kit.ipd.sdq.ASEM.base.Named
-import edu.kit.ipd.sdq.ASEM.base.BasePackage
-import edu.kit.ipd.sdq.ASEM.classifiers.ClassifiersFactory
-import edu.kit.ipd.sdq.ASEM.dataexchange.DataexchangeFactory
-import edu.kit.ipd.sdq.ASEM.primitivetypes.PrimitivetypesFactory
+import edu.kit.ipd.sdq.metamodels.asem.AsemPackage
+import edu.kit.ipd.sdq.metamodels.asem.base.Identifiable
+import edu.kit.ipd.sdq.metamodels.asem.base.Named
+import edu.kit.ipd.sdq.metamodels.asem.base.BasePackage
+import edu.kit.ipd.sdq.metamodels.asem.classifiers.ClassifiersFactory
+import edu.kit.ipd.sdq.metamodels.asem.dataexchange.DataexchangeFactory
+import edu.kit.ipd.sdq.metamodels.asem.primitivetypes.PrimitivetypesFactory
 import org.eclipse.emf.ecore.EObject
 import org.junit.Before
 import tools.vitruv.framework.tuid.TuidManager
