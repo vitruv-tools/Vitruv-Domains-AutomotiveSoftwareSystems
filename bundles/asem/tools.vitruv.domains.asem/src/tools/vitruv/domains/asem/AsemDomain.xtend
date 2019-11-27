@@ -2,13 +2,13 @@ package tools.vitruv.domains.asem
 
 import tools.vitruv.framework.tuid.AttributeTuidCalculatorAndResolver
 import tools.vitruv.framework.tuid.TuidCalculatorAndResolver
-import edu.kit.ipd.sdq.ASEM.base.BasePackage
 import static tools.vitruv.domains.asem.AsemNamespace.*;
 import tools.vitruv.domains.emf.builder.VitruviusEmfBuilderApplicator
 import tools.vitruv.framework.domains.AbstractTuidAwareVitruvDomain
+import edu.kit.ipd.sdq.metamodels.asem.base.BasePackage
 
 class AsemDomain extends AbstractTuidAwareVitruvDomain {
-	public static final String METAMODEL_NAME = "ASEM"
+	public static final String METAMODEL_NAME = "asem"
 	
 	package new() {
 		super(METAMODEL_NAME, ROOT_PACKAGE, generateTuidCalculator(), FILE_EXTENSION);
