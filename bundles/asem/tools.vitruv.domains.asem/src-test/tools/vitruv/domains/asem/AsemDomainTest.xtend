@@ -25,31 +25,31 @@ import edu.kit.ipd.sdq.metamodels.asem.primitivetypes.SignedDiscreteType
 import edu.kit.ipd.sdq.metamodels.asem.primitivetypes.UnsignedDiscreteType
 
 class AsemDomainTest {
-	private static val TEST_NAME = "Test";
-	private var AsemDomain asemDomain;
+	static val TEST_NAME = "Test";
+	var AsemDomain asemDomain;
 	
 	@Before
-	public def void setup() {
+	def void setup() {
 		TuidManager.instance.reinitialize();
 		asemDomain = new AsemDomainProvider().domain;
 	}
 	
 	@Test
-	public def void testResponsibilityChecks() {
+	def void testResponsibilityChecks() {
 		val clazz = ClassifiersFactory.eINSTANCE.createClass();
 		Assert.assertTrue(asemDomain.isInstanceOfDomainMetamodel(clazz));
 		Assert.assertTrue(asemDomain.calculateTuid(clazz) !== null);
 	}
 	
 	@Test
-	def public void testTuidInClassifiersPackage() {
+	def void testTuidInClassifiersPackage() {
 		testNamedTuid(ClassifiersFactory.eINSTANCE.createClass(), edu.kit.ipd.sdq.metamodels.asem.classifiers.Class.simpleName);
 		testNamedTuid(ClassifiersFactory.eINSTANCE.createComposedType(), ComposedType.simpleName);
 		testNamedTuid(ClassifiersFactory.eINSTANCE.createModule(), edu.kit.ipd.sdq.metamodels.asem.classifiers.Module.simpleName);
 	}
 	
 	@Test
-	def public void testTuidInDataExchangePackage() {
+	def void testTuidInDataExchangePackage() {
 		testNamedTuid(DataexchangeFactory.eINSTANCE.createMethod(), Method.simpleName);
 		testNamedTuid(DataexchangeFactory.eINSTANCE.createMessage(), Message.simpleName);
 		testNamedTuid(DataexchangeFactory.eINSTANCE.createParameter(), Parameter.simpleName);
@@ -58,7 +58,7 @@ class AsemDomainTest {
 	}
 	
 	@Test
-	def public void testTuidInPrimitiveTypesPackage() {
+	def void testTuidInPrimitiveTypesPackage() {
 		testNamedTuid(PrimitivetypesFactory.eINSTANCE.createBooleanType(), BooleanType.simpleName);
 		testNamedTuid(PrimitivetypesFactory.eINSTANCE.createContinuousType(), ContinuousType.simpleName);
 		testNamedTuid(PrimitivetypesFactory.eINSTANCE.createPrimitiveType(), PrimitiveType.simpleName);

@@ -10,24 +10,24 @@ import org.eclipse.app4mc.amalthea.model.AmaltheaPackage
 import org.eclipse.app4mc.amalthea.model.INamed
 
 class AmaltheaDomainTest {
-	private static val TEST_NAME = "Test";
-	private var AmaltheaDomain asemDomain;
+	static val TEST_NAME = "Test";
+	var AmaltheaDomain asemDomain;
 	
 	@Before
-	public def void setup() {
+	def void setup() {
 		TuidManager.instance.reinitialize();
 		asemDomain = new AmaltheaDomainProvider().domain;
 	}
 	
 	@Test
-	public def void testResponsibilityChecks() {
+	def void testResponsibilityChecks() {
 		val clazz = AmaltheaFactory.eINSTANCE.createStimulusEvent();
 		Assert.assertTrue(asemDomain.isInstanceOfDomainMetamodel(clazz));
 		Assert.assertTrue(asemDomain.calculateTuid(clazz) !== null);
 	}
 	
 	@Test
-	def public void testNamedTuids() {
+	def void testNamedTuids() {
 		testNamedTuid(AmaltheaFactory.eINSTANCE.createConnector());
 	}
 	
