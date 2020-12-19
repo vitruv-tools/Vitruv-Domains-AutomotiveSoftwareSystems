@@ -20,13 +20,13 @@
    </license>
 
    <requires>
-      <import plugin="org.junit"/>
       <import plugin="com.google.guava"/>
       <import plugin="org.eclipse.xtext.xbase.lib"/>
-      <import plugin="org.eclipse.xtend.lib" version="2.16.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtend.lib"/>
       <import plugin="org.eclipse.xtend.lib.macro"/>
-      <import feature="tools.vitruv.framework.feature" version="0.3.0" match="greaterOrEqual"/>
-      <import feature="org.eclipse.app4mc.amalthea.models" version="0.9.5"/>
+      <import plugin="org.eclipse.app4mc.amalthea.model"/>
+      <import plugin="tools.vitruv.extensions.emf"/>
+      <import feature="tools.vitruv.framework.feature"/>
    </requires>
 
    <plugin
