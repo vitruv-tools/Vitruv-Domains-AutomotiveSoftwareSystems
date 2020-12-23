@@ -5,23 +5,17 @@
       <repositories location="../tools.vitruv.domains.automotive.updatesite/target/repository"/>
     </contributions>
     <contributions label="externals">
-      <repositories location="http://kit-sdq.github.io/updatesite/release/metamodels" mirrorArtifacts="false">
-        <features name="edu.kit.ipd.sdq.metamodels.asem.feature.feature.group" versionRange="0.3.0" categories="//@customCategories[identifier='metamodels']"/>
+      <repositories location="http://kit-sdq.github.io/updatesite/release/metamodels/asem/1.1.0" mirrorArtifacts="false">
+        <features name="edu.kit.ipd.sdq.metamodels.asem.feature.feature.group"/>
       </repositories>
-      <repositories location="http://kit-sdq.github.io/updatesite/release/commons" mirrorArtifacts="false">
-        <features name="edu.kit.ipd.sdq.commons.util.pcm.feature.feature.group" versionRange="1.1.0"/>
+      <repositories location="http://download.eclipse.org/releases/2020-12/" mirrorArtifacts="false">
+        <features name="org.eclipse.emf.ecore.edit.feature.group"/>
+        <features name="org.eclipse.emf.ecore.feature.group"/>
+        <features name="org.eclipse.emf.common.feature.group"/>
+        <features name="org.eclipse.emf.transaction.feature.group"/>
       </repositories>
-      <repositories location="http://download.eclipse.org/app4mc/updatesites/releases/0.9.5/" mirrorArtifacts="false">
+      <repositories location="http://download.eclipse.org/app4mc/updatesites/releases/1.0.0" mirrorArtifacts="false">
         <features name="org.eclipse.app4mc.amalthea.models.feature.group"/>
-      </repositories>
-      <repositories location="http://download.eclipse.org/releases/2018-12/" mirrorArtifacts="false">
-        <features name="org.eclipse.emf.ecore.edit.feature.group" versionRange="2.9.0"/>
-        <features name="org.eclipse.emf.ecore.feature.group" versionRange="2.12.0"/>
-        <features name="org.eclipse.emf.common.feature.group" versionRange="2.12.0"/>
-        <features name="org.eclipse.emf.transaction.feature.group" versionRange="1.10.0"/>
-        <features name="org.eclipse.xtend.sdk.feature.group" versionRange="2.12.0"/>
-        <features name="org.eclipse.xtext.ui.feature.group" versionRange="2.12.0"/>
-        <features name="org.eclipse.xtext.xbase.feature.group" versionRange="2.12.0"/>
       </repositories>
       <repositories location="http://download.eclipse.org/sphinx/releases/0.11.x" mirrorArtifacts="false">
         <features name="org.eclipse.sphinx.feature.group"/>
@@ -31,9 +25,9 @@
       </repositories>
     </contributions>
     <validationRepositories location="http://vitruv-tools.github.io/updatesite/nightly/framework"/>
+    <validationRepositories location="http://kit-sdq.github.io/updatesite/release/commons/1.8.1"/>
   </validationSets>
   <configurations architecture="x86_64"/>
   <configurations operatingSystem="linux" windowSystem="gtk" architecture="x86_64"/>
   <configurations operatingSystem="macosx" windowSystem="cocoa" architecture="x86_64"/>
-  <customCategories identifier="metamodels" label="SDQ Metamodels" features="//@validationSets[label='main']/@contributions[label='externals']/@repositories.0/@features.0"/>
 </aggregator:Aggregation>
