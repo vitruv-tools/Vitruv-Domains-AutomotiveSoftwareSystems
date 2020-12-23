@@ -1,7 +1,5 @@
 package tools.vitruv.domains.asem
 
-import org.junit.Test
-import org.junit.Assert
 import edu.kit.ipd.sdq.metamodels.asem.AsemPackage
 import edu.kit.ipd.sdq.metamodels.asem.base.Identifiable
 import edu.kit.ipd.sdq.metamodels.asem.base.Named
@@ -10,7 +8,6 @@ import edu.kit.ipd.sdq.metamodels.asem.classifiers.ClassifiersFactory
 import edu.kit.ipd.sdq.metamodels.asem.dataexchange.DataexchangeFactory
 import edu.kit.ipd.sdq.metamodels.asem.primitivetypes.PrimitivetypesFactory
 import org.eclipse.emf.ecore.EObject
-import org.junit.Before
 import tools.vitruv.framework.tuid.TuidManager
 import edu.kit.ipd.sdq.metamodels.asem.classifiers.ComposedType
 import edu.kit.ipd.sdq.metamodels.asem.dataexchange.Method
@@ -23,12 +20,17 @@ import edu.kit.ipd.sdq.metamodels.asem.primitivetypes.ContinuousType
 import edu.kit.ipd.sdq.metamodels.asem.primitivetypes.PrimitiveType
 import edu.kit.ipd.sdq.metamodels.asem.primitivetypes.SignedDiscreteType
 import edu.kit.ipd.sdq.metamodels.asem.primitivetypes.UnsignedDiscreteType
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
+import static org.junit.jupiter.api.Assertions.assertTrue
+import static org.junit.jupiter.api.Assertions.assertEquals
+import static org.junit.jupiter.api.Assertions.assertNotNull
 
 class AsemDomainTest {
 	static val TEST_NAME = "Test";
 	var AsemDomain asemDomain;
 	
-	@Before
+	@BeforeEach
 	def void setup() {
 		TuidManager.instance.reinitialize();
 		asemDomain = new AsemDomainProvider().domain;
@@ -37,8 +39,8 @@ class AsemDomainTest {
 	@Test
 	def void testResponsibilityChecks() {
 		val clazz = ClassifiersFactory.eINSTANCE.createClass();
-		Assert.assertTrue(asemDomain.isInstanceOfDomainMetamodel(clazz));
-		Assert.assertTrue(asemDomain.calculateTuid(clazz) !== null);
+		assertTrue(asemDomain.isInstanceOfDomainMetamodel(clazz));
+		assertNotNull(asemDomain.calculateTuid(clazz));
 	}
 	
 	@Test
@@ -81,10 +83,10 @@ class AsemDomainTest {
 
 	private def void assertTuid(EObject object, String expectedNamespaceUri, String expectedIdentifier) {
 		val tuidFragments = asemDomain.calculateTuid(object).toString.split("#");
-		Assert.assertEquals(3, tuidFragments.length);
-		Assert.assertEquals(expectedNamespaceUri, tuidFragments.get(0));
-		Assert.assertNotNull(tuidFragments.get(1));
-		Assert.assertEquals(expectedIdentifier, tuidFragments.get(2));
+		assertEquals(3, tuidFragments.length);
+		assertEquals(expectedNamespaceUri, tuidFragments.get(0));
+		assertNotNull(tuidFragments.get(1));
+		assertEquals(expectedIdentifier, tuidFragments.get(2));
 	}
 	
 }
