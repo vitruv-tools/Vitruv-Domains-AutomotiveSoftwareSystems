@@ -12,18 +12,26 @@
 	<packaging>pom</packaging>
 	<name>Bundle Modules</name>
 
+	<properties>
+		<maven-compiler.version>3.8.1</maven-compiler.version>
+		<maven-surefire.version>2.22.2</maven-surefire.version>
+		<junit-jupiter.version>5.7.0</junit-jupiter.version>
+		<junit-platform-provider.version>1.2.0</junit-platform-provider.version>
+	</properties>
+
 	<modules>
 		<module>asem</module>
 		<module>amalthea</module>
 	</modules>
 
 	<build>
+		<!-- Configure tests within plugin project without deploying them -->
 		<testSourceDirectory>src-test</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.1.0</version>
+				<version>${maven-clean.version}</version>
 				<executions>
 					<execution>
 						<id>gen-clean</id>
@@ -35,7 +43,7 @@
 							<filesets>
 								<fileset>
 									<directory>xtend-gen</directory>
-									<directory>xtend-gen-test</directory>
+									<directory>xtend-gen-tests</directory>
 								</fileset>
 							</filesets>
 						</configuration>
@@ -57,19 +65,25 @@
 					</execution>
 				</executions>
 				<configuration>
-					<testOutputDirectory>xtend-gen-test</testOutputDirectory>
+					<testOutputDirectory>xtend-gen-tests</testOutputDirectory>
 				</configuration>
 			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.22.2</version>
+				<version>${maven-surefire.version}</version>
+				<!-- Necessary to ensure that @Disabled annotation is considered -->
 				<dependencies>
 					<dependency>
-						<groupId>org.apache.maven.surefire</groupId>
-						<artifactId>surefire-junit4</artifactId>
-						<version>2.22.0</version>
+						<groupId>org.junit.platform</groupId>
+						<artifactId>junit-platform-surefire-provider</artifactId>
+						<version>${junit-platform-provider.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.junit.jupiter</groupId>
+						<artifactId>junit-jupiter-engine</artifactId>
+						<version>${junit-jupiter.version}</version>
 					</dependency>
 				</dependencies>
 				<executions>
@@ -91,6 +105,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler.version}</version>
 				<executions>
 					<execution>
 						<id>compiletests</id>
@@ -101,6 +116,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
 		</plugins>
 	</build>
 
