@@ -57,7 +57,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<testOutputDirectory>xtend-gen-tests</testOutputDirectory>
+					<testOutputDirectory>xtend-gen-test</testOutputDirectory>
 				</configuration>
 			</plugin>
 

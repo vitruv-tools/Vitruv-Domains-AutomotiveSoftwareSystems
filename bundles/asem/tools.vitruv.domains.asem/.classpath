@@ -19,6 +19,7 @@
 	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="xtend-gen-test">
 		<attributes>
+			<attribute name="ignore_optional_problems" value="true"/>
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
