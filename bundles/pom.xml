@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
+<project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
@@ -12,16 +12,9 @@
 	<packaging>pom</packaging>
 	<name>Bundle Modules</name>
 
-	<properties>
-		<maven-compiler.version>3.8.1</maven-compiler.version>
-		<maven-surefire.version>2.22.2</maven-surefire.version>
-		<junit-jupiter.version>5.7.0</junit-jupiter.version>
-		<junit-platform-provider.version>1.2.0</junit-platform-provider.version>
-	</properties>
-
 	<modules>
-		<module>asem</module>
-		<module>amalthea</module>
+		<module>tools.vitruv.domains.asem</module>
+		<module>tools.vitruv.domains.amalthea</module>
 	</modules>
 
 	<build>
@@ -67,39 +60,6 @@
 				<configuration>
 					<testOutputDirectory>xtend-gen-test</testOutputDirectory>
 				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>${maven-surefire.version}</version>
-				<!-- Necessary to ensure that @Disabled annotation is considered -->
-				<dependencies>
-					<dependency>
-						<groupId>org.junit.platform</groupId>
-						<artifactId>junit-platform-surefire-provider</artifactId>
-						<version>${junit-platform-provider.version}</version>
-					</dependency>
-					<dependency>
-						<groupId>org.junit.jupiter</groupId>
-						<artifactId>junit-jupiter-engine</artifactId>
-						<version>${junit-jupiter.version}</version>
-					</dependency>
-				</dependencies>
-				<executions>
-					<execution>
-						<phase>test</phase>
-						<configuration>
-							<includes>
-								<include>**/*Test.java</include>
-								<include>**/*Tests.java</include>
-							</includes>
-						</configuration>
-						<goals>
-							<goal>test</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 
 			<plugin>
