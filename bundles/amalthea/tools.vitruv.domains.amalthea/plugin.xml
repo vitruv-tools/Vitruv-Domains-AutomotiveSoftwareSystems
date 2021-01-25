@@ -6,9 +6,8 @@
 
 <plugin>
    <extension
-         id="amaltheaDomainProvider"
-         name="Amalthea Domain Provider"
-         point="tools.vitruv.framework.metamodel.domain">
+         name="Vitruv Amalthea Domain Provider"
+         point="tools.vitruv.framework.domains.provider">
       <domainProvider
             class="tools.vitruv.domains.amalthea.AmaltheaDomainProvider"></domainProvider>
    </extension>

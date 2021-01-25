@@ -20,13 +20,9 @@
    </license>
 
    <requires>
-      <import plugin="com.google.guava"/>
-      <import plugin="org.eclipse.xtext.xbase.lib"/>
-      <import plugin="org.eclipse.xtend.lib"/>
-      <import plugin="org.eclipse.xtend.lib.macro"/>
-      <import feature="tools.vitruv.framework.feature"/>
+      <import plugin="tools.vitruv.framework.domains"/>
       <import plugin="edu.kit.ipd.sdq.metamodels.asem"/>
-      <import plugin="tools.vitruv.extensions.emf"/>
+      <import plugin="org.eclipse.xtend.lib"/>
    </requires>
 
    <plugin

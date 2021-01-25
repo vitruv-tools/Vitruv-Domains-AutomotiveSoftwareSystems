@@ -2,26 +2,23 @@ package tools.vitruv.domains.amalthea
 
 import tools.vitruv.framework.tuid.AttributeTuidCalculatorAndResolver
 import tools.vitruv.framework.tuid.TuidCalculatorAndResolver
-import tools.vitruv.domains.emf.builder.VitruviusEmfBuilderApplicator
-import static tools.vitruv.domains.amalthea.AmaltheaNamespace.*
 import org.eclipse.app4mc.amalthea.model.AmaltheaPackage
 import tools.vitruv.framework.domains.AbstractTuidAwareVitruvDomain
 
 class AmaltheaDomain extends AbstractTuidAwareVitruvDomain {
-	public static final String METAMODEL_NAME = "Amalthea"
-	
+	public static val METAMODEL_NAME = "Amalthea"
+	public static val FILE_EXTENSION = "amalthea"
+	public static val ROOT_PACKAGE = AmaltheaPackage.eINSTANCE
+
 	package new() {
-		super(METAMODEL_NAME, ROOT_PACKAGE, generateTuidCalculator(), FILE_EXTENSION);
+		super(METAMODEL_NAME, ROOT_PACKAGE, generateTuidCalculator(), FILE_EXTENSION)
 	}
 
 	def protected static TuidCalculatorAndResolver generateTuidCalculator() {
-		return new AttributeTuidCalculatorAndResolver(METAMODEL_NAMESPACE, 
+		return new AttributeTuidCalculatorAndResolver(
+			ROOT_PACKAGE.nsURI,
 			#[AmaltheaPackage.eINSTANCE.INamed_Name.name]
-		);
+		)
 	}
-	
-	override getBuilderApplicator() {
-		return new VitruviusEmfBuilderApplicator();
-	}
-	
+
 }
