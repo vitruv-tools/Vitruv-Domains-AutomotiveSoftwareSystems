@@ -11,7 +11,7 @@
 	</parent>
 	
 	<artifactId>tools.vitruv.domains.automotive.updatesite</artifactId>
-	<name>Vitruv Domains Update Site</name>
+	<name>Vitruv Automotive Domains Update Site</name>
 	<packaging>eclipse-repository</packaging>
 	
 </project>
