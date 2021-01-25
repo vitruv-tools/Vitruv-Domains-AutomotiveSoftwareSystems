@@ -6,9 +6,8 @@
 
 <plugin>
    <extension
-         id="asemDomainProvider"
-         name="ASEM Domain Provider"
-         point="tools.vitruv.framework.metamodel.domain">
+         name="Vitruv ASEM Domain Provider"
+         point="tools.vitruv.framework.domains.provider">
       <domainProvider
             class="tools.vitruv.domains.asem.AsemDomainProvider"></domainProvider>
    </extension>
