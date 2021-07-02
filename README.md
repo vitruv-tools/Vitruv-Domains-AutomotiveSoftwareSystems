@@ -1,6 +1,6 @@
 # Vitruv-Domains for Automotive Software Systems
 
-[![Travis CI](https://img.shields.io/travis/vitruv-tools/Vitruv-Domains-AutomotiveSoftwareSystems.svg)](https://travis-ci.org/vitruv-tools/Vitruv-Domains-AutomotiveSoftwareSystems)
+[![GitHub Actions CI](https://github.com/vitruv-tools/Vitruv-Domains-AutomotiveSoftwareSystems/workflows/CI/badge.svg)](https://github.com/vitruv-tools/Vitruv-Domains-AutomotiveSoftwareSystems/actions?query=workflow%3ACI)
 [![Issues](https://img.shields.io/github/issues/vitruv-tools/Vitruv-Domains-AutomotiveSoftwareSystems.svg)](https://github.com/vitruv-tools/Vitruv-Domains-AutomotiveSoftwareSystems/issues)
 [![License](https://img.shields.io/github/license/vitruv-tools/Vitruv-Domains-AutomotiveSoftwareSystems.svg)](https://raw.githubusercontent.com/vitruv-tools/Vitruv-Domains-AutomotiveSoftwareSystems/master/LICENSE)
 
